@@ -9,19 +9,19 @@ public class VeiculosEntity {
 
     @Id
     @GeneratedValue
-    private Long id;
+    protected Long id;
 
-    private String placa;
+    protected String placa;
 
-    private String modelo;
+    protected String modelo;
 
-    private String cor;
+    protected String cor;
 
-    private String descricao;
+    protected String descricao;
 
-    private String categoria;
+    protected String categoria;
 
-    private double preco;
+    protected double preco;
 
     public Long getId() {
         return id;
