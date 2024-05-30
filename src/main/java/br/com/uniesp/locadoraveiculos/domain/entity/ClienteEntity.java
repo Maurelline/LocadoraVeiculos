@@ -13,8 +13,6 @@ public class ClienteEntity {
 
     private String nome;
 
-    private String cpf;
-
     private String email;
 
     private String telefone;
@@ -41,14 +39,6 @@ public class ClienteEntity {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getEmail() {

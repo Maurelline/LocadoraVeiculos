@@ -1,7 +1,9 @@
 package br.com.uniesp.locadoraveiculos.service.impl;
 
 import br.com.uniesp.locadoraveiculos.adapter.repository.VeiculosRepository;
+import br.com.uniesp.locadoraveiculos.domain.dto.CarroDTO;
 import br.com.uniesp.locadoraveiculos.domain.dto.VeiculosDTO;
+import br.com.uniesp.locadoraveiculos.domain.entity.CarroEntity;
 import br.com.uniesp.locadoraveiculos.domain.entity.VeiculosEntity;
 import br.com.uniesp.locadoraveiculos.service.VeiculosService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +27,10 @@ public class VeiculosServiceImpl implements VeiculosService {
         entity = repository.save(entity);
 
         return entity;
+    }
+
+    @Override
+    public CarroEntity criarCarro(CarroDTO dto) {
+        return null;
     }
 }

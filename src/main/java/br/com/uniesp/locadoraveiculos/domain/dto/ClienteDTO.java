@@ -1,10 +1,8 @@
 package br.com.uniesp.locadoraveiculos.domain.dto;
 
-public class ClienteDTO {
+public abstract class ClienteDTO {
 
     private String nome;
-
-    private String cpf;
 
     private String email;
 
@@ -24,14 +22,6 @@ public class ClienteDTO {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getEmail() {

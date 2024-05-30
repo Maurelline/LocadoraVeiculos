@@ -18,7 +18,6 @@ public class ClienteServiceImpl implements ClienteService {
         entity.setNome(dto.getNome());
         entity.setEmail(dto.getEmail());
         entity.setTelefone(dto.getTelefone());
-        entity.setCpf(dto.getCpf());
         entity.setEndereco(dto.getEndereco());
         entity.setCidade(dto.getCidade());
         entity.setEstado(dto.getEstado());
