@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "6d1c7aa5-eee5-4124-bbb6-a512dbbf6ca7",
+		"name": "Locadora de Veiculos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "828039",
+		"_collection_link": "https://cloudy-eclipse-685775.postman.co/workspace/Pet-Planner~1060659a-a239-4daf-9c38-dc25c15050d4/collection/828039-6d1c7aa5-eee5-4124-bbb6-a512dbbf6ca7?action=share&source=collection_link&creator=828039"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Adicionar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"nome_34094dc2c506\",\r\n  \"email\": \"email_0757b87f8834\",\r\n  \"telefone\": \"telefone_e027c13ba211\",\r\n  \"endereco\": \"endereco_14445d0bac37\",\r\n  \"cidade\": \"cidade_3a49b6ac0a00\",\r\n  \"estado\": \"estado_0db1c359716e\",\r\n  \"cep\": \"cep_5e86b5f88e7b\",\r\n  \"numeroDocumento\": \"numeroDocumento_a106f24df565\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Cliente Por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/clientes/:idcliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"clientes",
+								":idcliente"
+							],
+							"variable": [
+								{
+									"key": "idcliente",
+									"value": "50",
+									"description": "ID do cliente a ser buscado"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/clientes/:idcliente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"clientes",
+								":idcliente"
+							],
+							"variable": [
+								{
+									"key": "idcliente",
+									"value": "51",
+									"description": "ID do cliente a ser deletado"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Veículos",
+			"item": [
+				{
+					"name": "Adicionar Veiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"placa\": \"placa_13bde009f1f0\",\r\n  \"modelo\": \"modelo_c76a345febbf\",\r\n  \"cor\": \"cor_1f664aef3582\",\r\n  \"descricao\": \"descricao_ccc18c54e012\",\r\n  \"categoria\": \"categoria_9b8b8e8c2100\",\r\n  \"preco\": 99.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/veiculos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Veiculo por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/veiculos/:idveiculo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"veiculos",
+								":idveiculo"
+							],
+							"variable": [
+								{
+									"key": "idveiculo",
+									"value": "50",
+									"description": "Id do veiculo a ser buscado"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Veiculos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/veiculos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Veiculo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/veiculos/:idveiculo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"veiculos",
+								":idveiculo"
+							],
+							"variable": [
+								{
+									"key": "idveiculo",
+									"value": "50",
+									"description": "ID do veiculo a ser deletado"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locação",
+			"item": [
+				{
+					"name": "Locar Veiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/locacao/cliente/:idcliente/veiculo/:idveiculo/dias/:dias",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"locacao",
+								"cliente",
+								":idcliente",
+								"veiculo",
+								":idveiculo",
+								"dias",
+								":dias"
+							],
+							"variable": [
+								{
+									"key": "idcliente",
+									"value": "2",
+									"description": "ID do cliente que vai realizar locação"
+								},
+								{
+									"key": "idveiculo",
+									"value": "50",
+									"description": "ID do veiculo a ser locado"
+								},
+								{
+									"key": "dias",
+									"value": "10",
+									"description": "Quantidade de dias de locação"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Locações",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/locacao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"locacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finalizar Locação",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/locacao/finalizar/:idlocacao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"locacao",
+								"finalizar",
+								":idlocacao"
+							],
+							"variable": [
+								{
+									"key": "idlocacao",
+									"value": "1",
+									"description": "ID Locação a ser finalizada"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

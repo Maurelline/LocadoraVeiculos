@@ -1,15 +1,11 @@
 package br.com.uniesp.locadoraveiculos.domain.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class ClienteEntity {
-
-    @Id
-    @GeneratedValue
-    private Long id;
+@Table(name = "CLIENTE_ENTITY")
+public class ClienteEntity extends BaseEntity {
 
     private String nome;
 
@@ -25,13 +21,7 @@ public class ClienteEntity {
 
     private String cep;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private String numeroDocumento;
 
     public String getNome() {
         return nome;
@@ -87,5 +77,13 @@ public class ClienteEntity {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
     }
 }

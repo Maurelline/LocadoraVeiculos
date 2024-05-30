@@ -1,6 +1,6 @@
 package br.com.uniesp.locadoraveiculos.domain.dto;
 
-public abstract class VeiculosDTO {
+public class VeiculosDTO {
 
     private String placa;
 

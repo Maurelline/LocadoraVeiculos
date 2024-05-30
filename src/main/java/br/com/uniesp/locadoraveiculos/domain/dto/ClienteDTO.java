@@ -1,6 +1,6 @@
 package br.com.uniesp.locadoraveiculos.domain.dto;
 
-public abstract class ClienteDTO {
+public class ClienteDTO {
 
     private String nome;
 
@@ -15,6 +15,8 @@ public abstract class ClienteDTO {
     private String estado;
 
     private String cep;
+
+    private String numeroDocumento;
 
     public String getNome() {
         return nome;
@@ -70,5 +72,13 @@ public abstract class ClienteDTO {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
     }
 }
