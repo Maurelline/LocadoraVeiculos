@@ -9,5 +9,7 @@ public interface LocacaoService {
 
     List<LocacaoEntity> listarLocacoes();
 
+    List<LocacaoEntity> listarLocacoesCliente(Long idCliente);
+
     LocacaoEntity finalizarLocacao(Long idLocacao);
 }

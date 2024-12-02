@@ -8,11 +8,10 @@ import java.util.Random;
 public class RandomStringGenerator {
 
     // Fonte de caracteres para geração da string
+    public static final String DIGITS = "0123456789";
     public static final String UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     public static final String LOWER = UPPER.toLowerCase(Locale.ROOT);
-    public static final String DIGITS = "0123456789";
     public static final String ALPHANUM = UPPER + LOWER + DIGITS;
-
     private final Random random;
     private final char[] symbols;
     private final char[] buf;

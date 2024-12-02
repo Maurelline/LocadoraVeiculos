@@ -4,15 +4,16 @@ import br.com.uniesp.locadoraveiculos.adapter.repository.ClienteRepository;
 import br.com.uniesp.locadoraveiculos.domain.dto.ClienteDTO;
 import br.com.uniesp.locadoraveiculos.domain.entity.ClienteEntity;
 import br.com.uniesp.locadoraveiculos.service.ClienteService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ClienteServiceImpl implements ClienteService {
-    @Autowired
-    private ClienteRepository repository;
+
+    private final ClienteRepository repository;
 
     @Override
     public ClienteEntity criar(ClienteDTO dto) {

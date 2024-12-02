@@ -4,15 +4,16 @@ import br.com.uniesp.locadoraveiculos.adapter.repository.VeiculosRepository;
 import br.com.uniesp.locadoraveiculos.domain.dto.VeiculosDTO;
 import br.com.uniesp.locadoraveiculos.domain.entity.VeiculosEntity;
 import br.com.uniesp.locadoraveiculos.service.VeiculosService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class VeiculosServiceImpl implements VeiculosService {
-    @Autowired
-    private VeiculosRepository repository;
+
+    private final VeiculosRepository repository;
 
     @Override
     public VeiculosEntity criar(VeiculosDTO dto) {

@@ -1,26 +1,28 @@
 package br.com.uniesp.locadoraveiculos;
 
 import br.com.uniesp.locadoraveiculos.adapter.repository.ClienteRepository;
+import br.com.uniesp.locadoraveiculos.adapter.repository.LocacaoRepository;
 import br.com.uniesp.locadoraveiculos.adapter.repository.VeiculosRepository;
 import br.com.uniesp.locadoraveiculos.config.RandomStringGenerator;
 import br.com.uniesp.locadoraveiculos.domain.entity.ClienteEntity;
+import br.com.uniesp.locadoraveiculos.domain.entity.LocacaoEntity;
 import br.com.uniesp.locadoraveiculos.domain.entity.VeiculosEntity;
+import br.com.uniesp.locadoraveiculos.domain.enums.StatusLocacao;
 import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.Random;
 
 @SpringBootApplication
+@RequiredArgsConstructor
 public class LocadoraVeiculosApplication {
 
-    @Autowired
-    private ClienteRepository clienteRepository;
-
-    @Autowired
-    private VeiculosRepository veiculosRepository;
+    private final ClienteRepository clienteRepository;
+    private final VeiculosRepository veiculosRepository;
+    private final LocacaoRepository locacaoRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(LocadoraVeiculosApplication.class, args);
@@ -34,6 +36,7 @@ public class LocadoraVeiculosApplication {
             criarCliente(generator);
             criarVeiculos(generator, random);
         }
+        criarLocacao();
     }
 
     private void criarCliente(RandomStringGenerator generator) {
@@ -60,5 +63,16 @@ public class LocadoraVeiculosApplication {
         veiculo.setPreco(random.nextDouble() * 250);
 
         veiculosRepository.save(veiculo);
+    }
+
+    private void criarLocacao() {
+        var locacao = new LocacaoEntity();
+        locacao.setIdCliente(1L);
+        locacao.setIdVeiculo(1L);
+        locacao.setLocacao(StatusLocacao.ANDAMENTO);
+        locacao.setDataLocacao(LocalDate.now());
+        locacao.setDataDevolucaoCombinada(LocalDate.now().plusDays(7));
+
+        locacaoRepository.save(locacao);
     }
 }
